@@ -13,7 +13,8 @@ h1 {
   font-size: 3rem;
 
   &:hover {
-    border-bottom: 2px solid #ffd43b;
+    text-decoration: underline 2px solid #ffd43b;
+    text-underline-offset: .625rem;
   }
 }
 
