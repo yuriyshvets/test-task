@@ -4,6 +4,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 // webpack.config.js and do not mention it.
 const { DefinePlugin } = require("webpack");
 
+const appName = 'React';
+
 module.exports = {
   entry: "./src/index.jsx",
   output: {
@@ -30,9 +32,10 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+      appName
     }),
     new DefinePlugin({
-      __APP_NAME__: JSON.stringify("React"),
+      __APP_NAME__: JSON.stringify(appName),
     }),
   ],
   devServer: {
